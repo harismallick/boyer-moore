@@ -24,6 +24,7 @@ def good_suff_rule(partial_str: str, search_str: str) -> int:
             shift = find_mismatch(search_str[(mismatch_index-good_suffix_len):mismatch_index], good_suffix)
 
             #we paused here. Trying to figure out best solution for how to splice the search string.
+            #this is a test.
 
 
 
