@@ -6,7 +6,7 @@ Each time you can either climb 1 or 2 steps. In how many distinct ways can you c
 1 <= n <= 45
 '''
 
-n: int = 0
+n: int = 5
 
 #get to 10 by increments of either 1 or 2.
 
@@ -30,9 +30,34 @@ def num_to_binary(target:int) -> str: #function to generate the binary
         
     return output
 
+def binary_to_num(largest_step: list) -> int:
 
-def step_count(step_binary: str, target: int) -> int: #breakdown the binary to perform permutation to reach value of n. If value reached, add 
-                                                    #eg: '101' for n=5; permutate through 1, then '10', then '101' 
+    
     pass
 
-print(num_to_binary(n))
+# def step_count(step_binary: str, target: int) -> int: #breakdown the binary to perform permutation to reach value of n. If value reached, add 
+#                                                     #eg: '101' for n=5; permutate through 1, then '10', then '101' 
+#     pass
+
+def longest_step(target:int) -> list:
+    step_list = []
+    start_num = target
+    while target > 0:
+        step_list.append(1)
+        target -= 1
+
+    return step_list
+
+def binary_list(largest_step: list) -> list:
+
+    pass
+
+def main():
+    print(num_to_binary(n))
+    most_steps = longest_step(n)
+    steps_binary = binary_list(most_steps)
+    print(bin(5))
+
+
+if __name__ == '__main__':
+    main()
