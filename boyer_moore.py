@@ -53,6 +53,9 @@ def find_mismatch(partial_str: str, search_str: str) -> int:
 
 def boyer_moore(full_str: str, search_str: str) -> Tuple[bool, int, int]:
 
+    if len(search_str) == 0:
+        raise Exception("The given search string is empty")
+
     skips = 0
     i = 0
     stop_index = len(full_str)-len(search_str)
