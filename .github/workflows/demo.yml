@@ -11,3 +11,21 @@ jobs:
       - name: List files in workspace
         run: |
           ls ${{ github.workspace }}
+
+      - uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+      
+      - name: Run Python
+        run: |
+          python --version
+
+      - name: Install Pytest
+        run: |
+          pip install pytest
+    
+      # - run: python pytest
+
+      - name: Run pytest for boyer_moore
+        run: |
+          pytest
