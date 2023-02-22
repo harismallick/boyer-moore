@@ -20,11 +20,24 @@ jobs:
         run: |
           python --version
 
-      - name: Install Pytest
-        run: |
-          pip install pytest
+      # - name: Install Pytest
+      #   run: |
+      #     pip install pytest
     
       # - run: python pytest
+      # Rather than installing each package needed for testing, you can create a requirements.txt file
+      # and execute that in python with Github actions.
+
+      # Another solution is to create a pipenv, generate a Pipfile, add pytest execution to '[scripts]'
+      # in the pipfile. Execute the pytest variable in the Pipfile via Github actions
+
+      - name: Install pipenv
+        run: |
+          pip install pipenv
+
+      - name: Install dependencies
+        run: |
+          
 
       - name: Run pytest for boyer_moore
         run: |
