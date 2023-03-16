@@ -29,14 +29,14 @@ def get_dataframe(mut_dict: dict):
 
     df = pd.DataFrame.from_dict(mut_dict, orient='index')
     #print(df)
-    df.to_csv("2023-01-16_teln_mutants.csv")
+    df.to_csv("2023-03-16_teln_mutants.csv")
 
     pass
 
 
 def main():
     #handle: str = 'test_file.txt'
-    handle: str = 'TL_Rd2_AA.txt'
+    handle: str = 'TL_Rd2_AA_2.txt'
     wt_seq: str = get_parent_seq(handle)
     mut_dict: dict = get_mutations(handle, wt_seq)
     #print(mut_dict)
